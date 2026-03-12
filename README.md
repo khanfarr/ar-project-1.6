@@ -119,4 +119,4 @@ In simple terms, these scripts pulled live city data, updated the cube visuals/t
 
 
 ## Demo Video
-- [Watch demo video](Media/ar-project-1-demo.mp4)
+- [Watch demo video](https://youtu.be/j1VwndaSRAA)

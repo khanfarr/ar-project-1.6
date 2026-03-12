@@ -33,19 +33,24 @@ I tested a few free basic assets first, but I switched to Meshy AI models becaus
 ### Screenshots
 I stored screenshots in the `Media/` folder.
 
-![Figure 1 - NYC cube close-up showing landmarks and info text](Media/newyork-cube.png)
+<img src="Media/newyork-cube.png" alt="Figure 1 - NYC cube close-up showing landmarks and info text" width="300" />
+
 Figure 1 showed my New York cube with landmark models and the live text panels, so readers could see how I combined visual identity and real-time city data in one AR object.
 
-![Figure 2 - Toronto cube close-up showing Canadian-themed models](Media/toronto-cube2.png)
+<img src="Media/toronto-cube2.png" alt="Figure 2 - Toronto cube close-up showing Canadian-themed models" width="300" />
+
 Figure 2 showed my Toronto cube and its Canadian themed props, highlighting how I used model selection to make the location recognizable at a glance.
 
-![Figure 3 - Plane animation was active when both cubes were tracked](Media/plane-animation.png)
+<img src="Media/plane-animation.png" alt="Figure 3 - Plane animation was active when both cubes were tracked" width="300" />
+
 Figure 3 showed the plane animation that appeared only when both cubes were tracked, which was the main interaction linking the two cities.
 
-![Figure 4 - Time-of-day lighting variation](Media/time-change.png)
+<img src="Media/time-change.png" alt="Figure 4 - Time-of-day lighting variation" width="300" />
+
 Figure 4 showed the lighting shift across different times of day, demonstrating how I used color and intensity changes to make the scene feel more dynamic.
 
-![Figure 5 - Weather-based color variation](Media/weather-change.png)
+<img src="Media/weather-change.png" alt="Figure 5 - Weather-based color variation" width="300" />
+
 Figure 5 showed weather-based color changes on the cube shell, which gave users a quick visual cue about city conditions.
 
 ## Process
@@ -61,11 +66,17 @@ In simple terms, these scripts pulled live city data, updated the cube visuals/t
 - `CityWeatherController.cs`: applied weather-based cube shell colors
 
 ### How the scripts work together
-- When the scene started and the cubes were tracked, the city scripts began updating their text panels.
-- The weather/time/flight scripts called APIs on a refresh loop, then wrote the newest values to TextMeshPro text objects.
+- When the scene starts and the cubes were tracked, the city scripts will began updating their text panels.
+- The weather/time/flight scripts will call APIs on a refresh loop, then wrote the newest values to TextMeshPro text objects.
 - If an API call failed, I kept the last good value (or showed `N/A`) so the UI did not break.
-- `PlanePresenceManager` checked whether both targets were visible: if yes, it enabled and updated the plane orbit animation.
-- `CityTimeController` and `CityWeatherController` applied environment changes (lighting and cube color) so the scene reflected conditions visually, not just through text.
+- `PlanePresenceManager` checks whether both targets were visible: if yes, it enabled and updated the plane orbit animation.
+- `CityTimeController` and `CityWeatherController` applied environment changes so the scene reflected conditions visually, not just through text:
+  - Daytime: I used brighter white light.
+  - Sunset: I shifted to warmer orange light with lower intensity.
+  - Nighttime: I used dimmer cool/blue lighting.
+  - Clear weather: I set the cube shell to a sky-blue tone.
+  - Rain: I set the cube shell to a darker blue.
+  - Snow: I set the cube shell to white.
 
 ### Tools, libraries, and APIs
 - Unity (project created with `6000.3.6f1`)

@@ -45,13 +45,13 @@ Figure 2 showed my Toronto cube and its Canadian themed props, highlighting how 
 
 Figure 3 showed the plane animation that appeared only when both cubes were tracked, which was the main interaction linking the two cities.
 
-<img src="Media/time-change.png" alt="Figure 4 - Time-of-day lighting variation" width="300" />
+<img src="Media/time-change.png" alt="Figure 4 - Time-of-day lighting variation" width="400" />
 
-Figure 4 showed the lighting shift across different times of day, demonstrating how I used color and intensity changes to make the scene feel more dynamic.
+Figure 4 showed the lighting shift across different times of day. I also added an Inspector test option (which you can see on the bottom right) so I could manually switch time states (day, sunset, night) without waiting in real time, which helped me confirm the feature was working correctly.
 
-<img src="Media/weather-change.png" alt="Figure 5 - Weather-based color variation" width="300" />
+<img src="Media/weather-change.png" alt="Figure 5 - Weather-based color variation" width="400" />
 
-Figure 5 showed weather-based color changes on the cube shell, which gave users a quick visual cue about city conditions.
+Figure 5 showed weather-based color changes on the cube shell. I added a matching Inspector test setting (which you can see on the bottom right) so I could manually test clear, rain, and snow states and verify the visual mapping worked correctly.
 
 ## Process
 ### How the application is structured

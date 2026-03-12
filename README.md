@@ -110,4 +110,4 @@ I organized core scripts under `Assets/Scripts/`:
 
 
 ## Demo Video
-- [Watch demo video](Media/ar-project-1-demo.mp4)
+- [Watch demo video](https://youtu.be/j1VwndaSRAA)
